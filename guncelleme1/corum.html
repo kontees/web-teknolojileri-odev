@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ÇORUM</title>
+  </head>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    /* boyutlarını ayarlamak için kullandım */
+
+    body {
+      margin: 0;
+      font-family: "Roboto", sans-serif;
+    }
+    /* google fontdan body etiketi içerisindekiler için font seçtim */
+
+    .ana-baslık {
+      background-color: #a9907e;
+      padding: 8px 16px;
+    }
+
+    .giriş-nav {
+      display: inline-block; /* yanyana sıralı durmaları için  */
+      width: calc(100% - 101px); /*genişliğini hesaplamak için kullandım*/
+      text-align: right;
+      font-family: "Roboto", sans-serif;
+    }
+
+    .main-nav {
+      margin: 0;
+      padding: 0;
+      list-style: none; /*liste işaretini kaldırmak için kullandım */
+    }
+
+    .main-nav-liste {
+      display: inline-block;
+      margin: 0 10px; /*kenar boşluklarını ayarlamak için kullandım*/
+    }
+
+    .site-logosu {
+      color: #fff;
+      text-decoration: none; /*altı çizili halden çıkarmak için kullandım*/
+      font-weight: bold;
+      font-size: 21px;
+    }
+    .main-nav-liste a {
+      /*linklerin altındaki çizgiyi kaldırmak ve beyaz renkte yapmak için kulladım*/
+      text-decoration: none;
+      color: #fff;
+    }
+
+    .main-nav-liste a:hover,
+    .main-nav-liste :hover::before {
+      color: #675d50; /*linklerin üstüne fare imleci gelince renk değiştirmesi için*/
+    }
+
+    .main-nav-liste:active::before, /*linklerin üstüne fare imleci gelince renk değiştirmesi için*/
+      .main-nav-liste a:active {
+      color: #fff;
+    }
+    .main-nav-liste::before {
+      content: "\2022";
+      color: #fff;  /* yuvarlak bir nokta işareti eklemek için kullandım*/
+    }
+
+    .main-nav-liste--login a {
+      color: #fff;
+      background-color: #675d50;
+      padding: 4px 16px;
+      border-radius: 8px;
+      border: 2px solid #fff;
+    }
+
+    .main-nav-liste--login a:hover {
+      color: #675d50;
+      border: 2px solid#675d50;
+      background-color: #fff;
+    }
+
+    .main-nav-liste--login::before {
+      content: none;
+    }
+
+    #ana-kısım {
+        background: url(flower.jpg);
+        background-position: center;
+        height: 180px;
+        width: 100%;
+        padding: 20px;
+      }
+
+      #makale {
+        padding: 10px;
+        text-align: center;
+      }
+
+      #makale h2 {
+        color: #675d50;
+        font-size: 30px;
+      }
+
+      .row {
+        margin-bottom: 40px;
+      }
+
+
+
+
+  </style>
+
+  <body>
+    <header class="ana-baslık">
+      <a href="#" class="site-logosu">Beni Tanıyın </a>
+      <nav class="giriş-nav">
+        <ul class="main-nav">
+          <li class="main-nav-liste">
+            <a href="#">İletişim Sayfası</a>
+          </li>
+          <li class="main-nav-liste">
+            <a href="#">Özgeçmiş</a>
+          </li>
+          <li class="main-nav-liste main-nav-liste--login">
+            <a href="#">Login</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+        
+        <section id="ana-kısım">
+            <h1>Hoşgeldiniz !!</h1>
+          </section>
+          <section id="makale">
+            <div class="row">
+              <h2>Hoşgeldiniz ! </h2>
+              <p>
+                Kendim ve yaşadığım şehir hakkında birçok bilgi için siteme hoşgeldiniz
+              </p>
+            </div>
+
+
+  </body>
+</html>
