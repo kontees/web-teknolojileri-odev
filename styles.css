@@ -1,0 +1,178 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+}
+
+main {
+  margin-top: 50px;
+}
+
+#ana-kısım {
+  background: linear-gradient(
+      to bottom,
+      rgba(252, 153, 124, 0.2),
+      rgba(250, 81, 30, 0.2)
+    ),
+    url("../img/vintage.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+#ana-kısım .content {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #675d50;
+  font-size: 30px;
+  background: #fffbf5;
+  padding: 20px;
+  width: 60%;
+  border-radius: 10px;
+}
+
+#ana-kısım h1 {
+  position: absolute;
+  top: 50%;
+  margin: 0;
+  color: #fff;
+  font-size: 45px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.ana-başlık {
+  background-color: #a4907c;
+  padding: 8px 16px;
+}
+
+.main-nav {
+  display: inline-block;
+  width: calc(100% - 101px);
+  text-align: right;
+  font-family: "Roboto", sans-serif;
+}
+.main-nav__items {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.main-nav__item {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.ana-başlık {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  top: 0;
+}
+
+.main-header__logo {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 21px;
+}
+
+.main-nav__item a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.main-nav__item a:hover,
+.main-nav__item:hover::before {
+  color: #f1dec9;
+}
+.main-nav__item:active::before,
+.main-nav__item a:active {
+  color: #fff;
+}
+
+.main-nav__item::before {
+  content: "\2022";
+  color: #fff;
+}
+
+.main-nav__item--login::before {
+  content: none;
+}
+
+#how-it-works {
+  padding: 10px;
+  text-align: center;
+}
+
+.row {
+  margin-bottom: 40px;
+}
+
+.col-3 {
+  display: inline-block;
+  width: 30%;
+  padding: 16px;
+  margin: 8px;
+}
+
+.col-2 {
+  display: inline-block;
+  width: calc(50% - 2px);
+  height: 350px;
+  background-color: #675d50;
+}
+
+.icon-box h3 {
+  color: #a4907c;
+  font-size: 26px;
+}
+
+.icon-box i {
+  color: #a4907c;
+}
+
+.features__left {
+  background: linear-gradient(
+      to bottom,
+      rgba(252, 153, 124, 0.2),
+      rgba(250, 81, 30, 0.2)
+    ),
+    url("../img/cicek.jpg");
+  background-size: cover;
+  background-position: top center;
+}
+
+.features__right {
+  background-color: #e1d4bb;
+  padding: 40px;
+  vertical-align: top;
+}
+
+.features__right h3 {
+  font-size: 30px;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #675d50;
+  font-size: 30px;
+}
+
+.container {
+  margin: 0 auto;
+  width: 1000px;
+}
