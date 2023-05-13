@@ -220,3 +220,10 @@ main {
   margin: 0 auto;
   width: 1000px;
 }
+
+.counter__item {
+  color: #675d50;
+  background: #f1dec9 !important;
+  background-color: #a4907c;
+  padding: 8px 16px;
+}
