@@ -19,11 +19,15 @@
         <nav class="main-nav">
             <ul class="main-nav__items">
                 <li class="main-nav__item">
-                    <a href="#">Kayıt ol</a>
+                    <a href="#">Eğitim Bilgileri</a>
                 </li>
                 <li class="main-nav__item">
-                    <a href="#">iletişim</a>
+                    <a href="#">iletişim Sayfası </a>
+                   
                 </li>
+                <li class="main-nav__item">
+                  <a href="#">Kayıt Ol</a>
+              </li>
                 <li class="main-nav__item main-nav__item--login">
                     <a class="btn btn-secondary" href="#">Login</a>
                 </li>
@@ -43,7 +47,6 @@
             <div class="row">
                 <h2 class="section-title">Bu yolculuğa hazır mısın ?
                      </h2>
-                <p></p>
             </div>
 
             <div class="row">
@@ -68,9 +71,13 @@
         <section id="features">
             <div class="row">
                 <div class="col-2 features__left"></div><div class="col-2 features__right">
-                    <h3>Şehrim ve daha fazlasını işte şimdi öğrenin</h3>
-                    <p>Beni, hayatımı, şehrimi, şehrime ait miraslarımızı, geçmişimi ve fazlasını szilere anlattığım sayfamda işte keyif alacağınız bir tur başlıyor.</p>
-                    <a class="btn btn-secondary" href="#">Şimdi Başlayalım </a>
+                    <h3>Merhaba işte kendimi tanıttığım minik bir yazı sizlerle</h3>
+                    <p>Merhaba adım Şevval Duygu Örklemez. 7 Aralık 2002 yılında doğdum. Şu an üniversitede
+                    Bilgisayar Mühendisliği 1. sınıf öğrencisi olarak öğrenim görmekteyim. Hobilerim arasında
+                    genellikle evde kendi halimde takılmak vardır. Çok fazla arkadaş canlısı biri olmadığım için
+                  kendi halimde evde takılmayı daha çok seviyorum. Birçok dizi ve filmi izlemeyi tercih ederim. En sevdiğim
+                spor voleyboldur fakat oynamayı değil izlemeyi seviyorum. Hakkımda daha çok bilgi için lütfen içerikler kısmına göz atmayı unutmayınız </p>
+                  
                 </div>
             </div>
         </section>
@@ -85,13 +92,19 @@
                 <ul class="plan__features">
                   <li>Hitit uygarlığının merkezi</li>
                   <li>her biri sanat şaheseri olan Selçuklu mimarisi ile süslü</li>
-                  <li>İncesu Kanyonu gibi doğal güzellikleri çevrili</li>
                   <li>>Meşhur leblebisi ile dünyaca tanınan Çorum için</li>
                   <li> aşağıdaki butona tıklayınız</li>
                 </ul>
+
                 <div>
-                  <button class="btn btn-primary">Şehrim</button>
+                  <button class="btn btn-primary" onclick="goToCityPage()">Şehrim</button>
                 </div>
+                
+                <script>
+                  function goToCityPage() {
+                    window.location.href = "sehrim.html";
+                  }
+                </script>
               </div>
             </div>
             <div class="col-3 plan plan--featured">
@@ -101,16 +114,22 @@
                 <h3>Geçmişten bugüne gelen hikaye</h3>
                 <ul class="plan__features">
                   <li>Futbol Takımı</li>
-                  <li>Hitit uygurlağının bilgileri</li>
-                  <li>Alacahöyük</li>
-                  <li>Gezilecek Yerler</li>
-                  <li>Ve dahası için butona tıklayınız </li>
+                  <li>Bulunduğum şehrimin futbol takımı hakkında 
+                    daha fazla bilgiye ulaşmak için lütfen butona tıklayınız
+                  </li>
                 </ul>
-                  <div>
-                    <button class="btn btn-primary">Mirasımız</button>
-                  </div>
+                
+                <div>
+                  <button class="btn btn-primary" onclick="goToTeamPage()">Takımımız</button>
                 </div>
-        </div>
+                
+                <script>
+                  function goToTeamPage() {
+                    window.location.href = "mirasımız.html";
+                  }
+                </script>
+                </div>
+              </div>
 
         <div class="col-3 plan">
             <div class="inner-plan">
@@ -119,7 +138,6 @@
               <ul class="plan__features">
                 <li>dram filmleri</li>
                 <li>uzakdoğu dizileri</li>
-                <li>takım oyunları</li>
                 <li>farklı tarzda şarkılar </li>
                 <li>ve dahasını öğrenmek için</li>
                 <li>aşağıdaki butona basınız</li>
@@ -132,22 +150,25 @@
         </div>
       </div>
     </section>
-    <section id="counters">
-      <div class="row counter">
+    <section id="panel">
+      <div class="row panel">
         <div class="col-3">
-          <span class="counter__item">108</span>
+          <span class="panel__item">108</span>
           <h4>Ziyaretçi</h4>
         </div>
         <div class="col-3">
-          <span class="counter__item">72</span>
+          <span class="panel__item">72</span>
           <h4>Yeni Kayıt</h4>
         </div>
         <div class="col-3">
-          <span class="counter__item">152</span>
+          <span class="panel__item">152</span>
           <h4>Görüntülenme</h4>
         </div>
       </div>
     </section>
        
+
+
+
 </body>
 </html>

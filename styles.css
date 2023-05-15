@@ -30,6 +30,48 @@ main {
   position: relative;
 }
 
+#ana-kısım1 {
+  background: linear-gradient(
+      to bottom,
+      rgba(252, 153, 124, 0.2),
+      rgba(250, 81, 30, 0.2)
+    ),
+    url("../img/hattusa-antik-kenti-corum.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+#ana-kısım1 .content {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #675d50;
+  font-size: 30px;
+  background-color: #fffbf5;
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+  text-align: center;
+
+  padding: 20px;
+  width: 60%;
+  border-radius: 10px;
+}
+
+#ana-kısım1 h1 {
+  position: absolute;
+  top: 50%;
+  margin: 0;
+  color: #675d50;
+  font-size: 45px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 #ana-kısım .content {
   position: absolute;
   top: 60%;
@@ -121,6 +163,48 @@ main {
   margin-bottom: 40px;
 }
 
+#ana-kısım2 {
+  background: linear-gradient(
+      to bottom,
+      rgba(252, 153, 124, 0.2),
+      rgba(250, 81, 30, 0.2)
+    ),
+    url("../img/futbol.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+#ana-kısım2 .content {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #675d50;
+  font-size: 30px;
+  background-color: #fffbf5;
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+  text-align: center;
+
+  padding: 20px;
+  width: 60%;
+  border-radius: 10px;
+}
+
+#ana-kısım2 h1 {
+  position: absolute;
+  top: 50%;
+  margin: 0;
+  color: #675d50;
+  font-size: 45px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .col-3 {
   display: inline-block;
   width: 30%;
@@ -140,6 +224,10 @@ main {
   font-size: 26px;
 }
 
+.icon-box col-3 {
+  font-family: "Montserrat", sans-serif;
+}
+
 .icon-box i {
   color: #a4907c;
 }
@@ -150,19 +238,65 @@ main {
       rgba(252, 153, 124, 0.2),
       rgba(250, 81, 30, 0.2)
     ),
-    url("../img/cicek.jpg");
+    rgba(250, 81, 30, 0.2)
+      url("../img/f0a1afa4-1808-40c8-b053-26d892ce6789.jfif");
+
+  background-position: center center;
+}
+
+#ana-kısım3 {
+  background: linear-gradient(
+      to bottom,
+      rgba(252, 153, 124, 0.2),
+      rgba(250, 81, 30, 0.2)
+    ),
+    url("../img/people.jpg");
+  background-position: center;
   background-size: cover;
-  background-position: top center;
+  background-attachment: fixed;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+#ana-kısım3 .content {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #675d50;
+  font-size: 30px;
+  background-color: #fffbf5;
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+  text-align: center;
+
+  padding: 20px;
+  width: 60%;
+  border-radius: 10px;
+}
+
+#ana-kısım3 h1 {
+  position: absolute;
+  top: 50%;
+  margin: 0;
+  color: #675d50;
+  font-size: 45px;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .features__right {
   background-color: #e1d4bb;
   padding: 40px;
   vertical-align: top;
+  font-family: "Montserrat", sans-serif;
 }
 
 .features__right h3 {
-  font-size: 30px;
+  font-family: "Dancing Script", cursive;
+
+  font-size: 28px;
 }
 
 .section-title {
@@ -172,9 +306,152 @@ main {
   font-size: 30px;
 }
 
+.alacahöyük-sol {
+  background: linear-gradient(
+      to bottom,
+      rgba(252, 153, 124, 0.2),
+      rgba(250, 81, 30, 0.2)
+    ),
+    url("../img/aslan.jpg");
+
+  background-size: cover;
+  background-position: center;
+}
+
+.alacahöyük-sağ {
+  background-color: #e1d4bb;
+  padding: 40px;
+  vertical-align: top;
+  font-family: "Karla", sans-serif;
+  font-size: small;
+  text-align: left;
+}
+
+.alacahöyük-sağ h3 {
+  font-family: "Raleway", sans-serif;
+
+  font-size: 28px;
+}
+
+.futbol-sol {
+  background: linear-gradient(
+      to bottom,
+      rgba(252, 153, 124, 0.2),
+      rgba(250, 81, 30, 0.2)
+    ),
+    url("../img/corumfkerzincan.webp");
+
+  background-size: cover;
+  background-position: center;
+}
+
+.futbol-sağ {
+  background-color: #e1d4bb;
+  padding: 20px;
+  vertical-align: top;
+  font-family: "Karla", sans-serif;
+  font-size: small;
+  text-align: left;
+}
+
+.futbol h3 {
+  font-family: "Raleway", sans-serif;
+
+  font-size: 28px;
+}
+
 .plan {
   text-align: center;
   padding: 5px;
+}
+
+.saat-kulesi-sol {
+  background: linear-gradient(
+      to bottom,
+      rgba(252, 153, 124, 0.2),
+      rgba(250, 81, 30, 0.2)
+    ),
+    url("../img/kule3.jfif");
+
+  background-size: cover;
+  background-position: center;
+}
+
+.saat-kulesi-sağ {
+  background-color: #e1d4bb;
+  padding: 40px;
+  vertical-align: top;
+  font-family: "Karla", sans-serif;
+  font-size: small;
+  text-align: left;
+  list-style-type: none;
+}
+
+.saat-kulesi-sağ h3 {
+  font-family: "Raleway", sans-serif;
+
+  font-size: 28px;
+}
+
+.mezar-sol {
+  background: linear-gradient(
+      to bottom,
+      rgba(252, 153, 124, 0.2),
+      rgba(250, 81, 30, 0.2)
+    ),
+    url("../img/mezar.jpg");
+
+  background-size: cover;
+  background-position: center;
+}
+
+.mezar-sağ {
+  background-color: #e1d4bb;
+  padding: 40px;
+  vertical-align: top;
+  font-family: "Karla", sans-serif;
+  font-size: small;
+  text-align: left;
+  list-style-type: none;
+}
+
+.mezar h3 {
+  font-family: "Raleway", sans-serif;
+
+  font-size: 28px;
+}
+
+.plan {
+  text-align: center;
+  padding: 5px;
+}
+
+.çorum-sol {
+  background: linear-gradient(
+      to bottom,
+      rgba(252, 153, 124, 0.2),
+      rgba(250, 81, 30, 0.2)
+    ),
+    url("../img/corum-leblebisi.jpg");
+
+  background-size: cover;
+  background-position: center;
+}
+
+.çorum-sağ {
+  background-color: #e1d4bb;
+  padding: 40px;
+  vertical-align: top;
+  font-family: "Karla", sans-serif;
+  font-size: small;
+  text-align: left;
+  list-style-type: none;
+}
+
+.çorum h3 {
+  font-family: "Raleway", sans-serif;
+
+  font-size: 28 px;
 }
 
 .plan__badge {
@@ -221,9 +498,115 @@ main {
   width: 1000px;
 }
 
-.counter__item {
+.panel__item {
   color: #675d50;
-  background: #f1dec9 !important;
-  background-color: #a4907c;
+  font-family: "Dancing Script", cursive;
+  font-size: 28px;
   padding: 8px 16px;
+}
+
+.col-3 h4 {
+  font-size: 100 px;
+  font-family: "Dancing Script", cursive;
+  color: #675d50;
+}
+
+.panel {
+  background: linear-gradient(to bottom, #ffffff 0%, #ffffff 100%);
+  text-align: center;
+  padding: 50px;
+  height: 180px; /* Yükseklik değeri 200px olarak ayarlandı */
+  margin: 0 auto; /* Merkezlemek için kullanılan margin */
+}
+
+.counter__item {
+  font-size: 30px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.panel h4 {
+  margin: 0;
+  color: #fff;
+}
+
+.card-container {
+  padding: 10px;
+}
+
+.card {
+  background-color: #f1dec9;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 10px 10px 40px #675d50;
+  /* position: relative; */
+  /* top: 0; */
+  transition: all 0.3s;
+}
+.card:hover {
+  /* top: -10px; */
+  transform: translateY(-10px);
+}
+
+.card-image {
+  max-height: 150px;
+}
+
+.card-body {
+  padding: 10px;
+}
+
+footer {
+  background-color: #675d50;
+  padding: 30px;
+  margin-top: 30px;
+
+  position: relative;
+  bottom: -200px;
+}
+
+footer a {
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+footer ul {
+  margin: 0;
+  padding: 0;
+}
+
+footer ul li {
+  list-style-type: none;
+  display: inline-block;
+  margin-left: 5px;
+}
+
+#social-links {
+  text-align: right;
+}
+
+.fab {
+  padding: 10px;
+  font-size: 25px;
+  border-radius: 50%;
+}
+
+.fab:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook {
+  background-color: #abc4aa;
+  color: #fff;
+}
+
+.fa-twitter {
+  background-color: #abc4aa;
+  color: #fff;
+}
+
+.fa-instagram {
+  background-color: #abc4aa;
+  color: #fff;
 }
