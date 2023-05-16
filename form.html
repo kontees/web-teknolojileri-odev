@@ -1,0 +1,193 @@
+!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>❃-İletişim Bilgileri</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/buttons.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  </head>
+  <body id="body">
+    <header class="ana-başlık">
+      <a href="#" class="main-header__logo">𝓭𝓾𝔂𝓰𝓾'𝓼 𝓭𝓲𝓪𝓻𝔂</a>
+      <nav class="main-nav">
+        <ul class="main-nav__items">
+          <li class="main-nav__item">
+            <a href="duygu.html">Anasayfa</a>
+          </li>
+
+          <li class="main-nav__item">
+            <a href="#">iletişim Sayfası </a>
+          </li>
+
+          <li class="main-nav__item">
+            <a href="#">Kayıt Ol</a>
+          </li>
+
+          <li class="main-nav__item main-nav__item--login">
+            <a class="btn btn-secondary" href="logın.html">Login</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="signup-page">
+      <h1 class="signup-title">Bilgilerinizi Giriniz</h1>
+      <form action="" class="signup-form">
+        <label for="firstname">Adınız</label>
+        <input type="text" id="firstname" />
+
+        <label for="lastname">Soyadınız</label>
+        <input type="text" id="lastname" />
+
+        <label for="email">Emailiniz</label>
+        <input type="email" id="email" />
+
+        <label for="password">Şifreniz</label>
+        <input type="password" id="password" />
+
+        <label for="gender">Cinsiyetiniz</label>
+        <select id="gender">
+          <option value="">Cinsiyet</option>
+          <option value="">Kadın</option>
+          <option value="">Erkek</option>
+        </select>
+
+        <input type="checkbox" id="agree-terms" />
+        <label for="agree-terms">
+          mail ile site haberlerini almak istiyorum
+        </label>
+        <br />
+        <br />
+
+        <button @click="validateForm" class="btn btn-primary">
+          Formu Gönder
+        </button>
+        <br />
+        <br />
+
+        <button @click="resetForm" class="btn btn-primary">
+          Formu Sıfırla
+        </button>
+
+        <br />
+        <br />
+      </form>
+
+      <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+      <script>
+        new Vue({
+          el: "#signup-form",
+          data: {
+            // Form verileri
+            firstname: "",
+            lastname: "",
+            email: "",
+            password: "",
+            gender: "",
+            agreeTerms: false,
+          },
+          methods: {
+            validateForm: function () {
+              // Form doğrulama işlemleri
+              if (this.firstname.trim() === "") {
+                alert("Lütfen adınızı girin.");
+                return;
+              }
+
+              if (this.lastname.trim() === "") {
+                alert("Lütfen soyadınızı girin.");
+                return;
+              }
+
+              if (this.email.trim() === "") {
+                alert("Lütfen e-posta adresinizi girin.");
+                return;
+              }
+
+              if (this.password.trim() === "") {
+                alert("Lütfen şifrenizi girin.");
+                return;
+              }
+
+              if (this.gender === "") {
+                alert("Lütfen cinsiyetinizi seçin.");
+                return;
+              }
+
+              if (!this.agreeTerms) {
+                alert("Lütfen şartları kabul edin.");
+                return;
+              }
+
+              // Formun gönderilmesi veya diğer işlemler
+              alert("Form başarıyla gönderildi!");
+              // Formun gönderilmesi veya diğer işlemler
+              localStorage.setItem("formData", JSON.stringify(this.$data));
+              window.location.href = "formgoruntule.html";
+            },
+
+            resetForm: function () {
+              // Formu sıfırlama işlemi
+              this.firstname = "";
+              this.lastname = "";
+              this.email = "";
+              this.password = "";
+              this.gender = "";
+              this.agreeTerms = false;
+            },
+          },
+        });
+      </script>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-2">
+            <ul id="footer-links">
+              <li><a href="#">About</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Forum</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-2">
+            <ul id="social-links">
+              <li><a href="" class="fab fa-facebook"></a></li>
+              <li><a href="" class="fab fa-twitter"></a></li>
+              <li><a href="" class="fab fa-instagram"></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <a href="#body" id="backtotop">
+      <i class="fas fa-chevron-circle-up"></i>
+    </a>
+  </body>
+</html>
