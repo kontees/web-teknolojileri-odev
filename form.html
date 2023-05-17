@@ -56,43 +56,50 @@
 
     <main class="signup-page">
       <h1 class="signup-title">Bilgilerinizi Giriniz</h1>
-      <form action="" class="signup-form">
+      <form action="formgoruntule.html" class="signup-form">
         <label for="firstname">Adınız</label>
-        <input type="text" id="firstname" />
+        <input type="text" id="firstname" v-model="firstname" />
+        <br />
 
         <label for="lastname">Soyadınız</label>
-        <input type="text" id="lastname" />
+        <input type="text" id="lastname" v-model="lastname" />
+        <br />
 
         <label for="email">Emailiniz</label>
-        <input type="email" id="email" />
+        <input type="email" id="email" v-model="email" />
+        <br />
+
+        <label for="birthdate">Doğum Tarihi</label>
+        <input type="date" id="birthdate" v-model="birthdate" />
+        <br />
 
         <label for="password">Şifreniz</label>
-        <input type="password" id="password" />
+        <input type="password" id="password" v-model="password" />
+        <br />
 
         <label for="gender">Cinsiyetiniz</label>
-        <select id="gender">
+        <select id="gender" v-model="gender">
           <option value="">Cinsiyet</option>
-          <option value="">Kadın</option>
-          <option value="">Erkek</option>
+          <option value="Kadın">Kadın</option>
+          <option value="Erkek">Erkek</option>
         </select>
+        <br />
 
-        <input type="checkbox" id="agree-terms" />
-        <label for="agree-terms">
-          mail ile site haberlerini almak istiyorum
-        </label>
+        <input type="checkbox" id="agree-terms" v-model="agreeTerms" />
+        <label for="agree-terms"
+          >Mail ile site haberlerini almak istiyorum</label
+        >
         <br />
         <br />
 
-        <button @click="validateForm" class="btn btn-primary">
+        <button type="button" @click="validateForm" class="btn btn-primary">
           Formu Gönder
         </button>
         <br />
         <br />
-
-        <button @click="resetForm" class="btn btn-primary">
+        <button type="button" @click="resetForm" class="btn btn-primary">
           Formu Sıfırla
         </button>
-
         <br />
         <br />
       </form>
@@ -100,7 +107,7 @@
       <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
       <script>
         new Vue({
-          el: "#signup-form",
+          el: ".signup-page",
           data: {
             // Form verileri
             firstname: "",
@@ -108,6 +115,7 @@
             email: "",
             password: "",
             gender: "",
+            birthdate: "",
             agreeTerms: false,
           },
           methods: {
@@ -118,6 +126,11 @@
                 return;
               }
 
+              if (this.birthdate === "") {
+                alert("Lütfen doğum tarihinizi girin.");
+                return;
+              }
+
               if (this.lastname.trim() === "") {
                 alert("Lütfen soyadınızı girin.");
                 return;
@@ -125,6 +138,13 @@
 
               if (this.email.trim() === "") {
                 alert("Lütfen e-posta adresinizi girin.");
+                return;
+              }
+
+              // E-posta doğrulama işlemi
+              var emailRegex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
+              if (!emailRegex.test(this.email)) {
+                alert("Lütfen geçerli bir e-posta adresi girin.");
                 return;
               }
 
@@ -145,8 +165,11 @@
 
               // Formun gönderilmesi veya diğer işlemler
               alert("Form başarıyla gönderildi!");
-              // Formun gönderilmesi veya diğer işlemler
+
+              // Form verilerini sakla
               localStorage.setItem("formData", JSON.stringify(this.$data));
+
+              // Yönlendirme yap
               window.location.href = "formgoruntule.html";
             },
 
@@ -155,7 +178,7 @@
               this.firstname = "";
               this.lastname = "";
               this.email = "";
-              this.password = "";
+              (this.birthdate = ""), (this.password = "");
               this.gender = "";
               this.agreeTerms = false;
             },

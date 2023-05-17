@@ -50,6 +50,8 @@
           </li>
         </ul>
       </nav>
+
+
     </header>
 
     <main>
@@ -65,49 +67,116 @@
                 <h2 class="section-title"> Gelin İlgi Alanlarıma Yakından Göz Atalım ! </h2>
             </div>
 
-
-            <section id="movies">
+              
+              <section id="movies">
                 <div class="container">
-                    <div class="row">
-                        <div class="col-3 card-container">
-                            <div class="card">
-                                <img class="card-image img-fluid" src="img/flowersss.jpg" alt="">
-                                <div class="card-body">
-                                    <h2>Kitaplar</h2>
-                                    <p> Çok fazla kitap okuyan bir insan değilim fakat bugüne kadar okuduğum
-                                        en iyi kitaplardan biri kesinlikle Kürk Mantolu Madonna'dır... Sayısız
-                                        kez okuyup bitirişimde farklı bir detayı fark ediyorum. Güzel bir alıntı bırakarak
-                                        sizlere mutlaka okumanızı tavsiye ediyorum
-                                    </p>  
-                                        <p>"Ben dünyadan ziyade kafamın içinde yaşayan bir insanım.." </p>
-                                
-                                   
-                                    <p>
-                                        <button class="btn btn-primary">Details</button>
-                                    </p>
-                                </div>
-                            </div>
+                  <div class="row">
+                    <div class="col-3 card-container">
+                      <div class="card">
+                
+                        <div class="card-body">
+                          <h2>Filmler</h2>
+                          <p id="movieInfo"></p>
+                          <p> <strong>Aynı Yıldızın Altında:</strong> Hazel Grace Lancaster, 
+                            (Shailene Woodley) zeki ve dalgacı Indianapolis gencidir, 
+                            ciğerlerine yayılmış terminal döneme giren tiroid kanseriyle mücadele eder. 
+                            Bunalıma girdiğine inanarak, Hazel'in annesi (Laura Dern) 
+                            onu arkadaş yapması için kanser hastalarının olduğu destek grubuna katılmaya zorlar.</p>
+                          <script>
+                            var xhr = new XMLHttpRequest();
+                            xhr.withCredentials = true;
+                          
+                            xhr.addEventListener("readystatechange", function () {
+                              if (this.readyState === this.DONE) {
+                                var response = JSON.parse(this.responseText);
+                                var movieTitle = response.result[0].Title;
+                                var movieYear = response.result[0].Year;
+                                var movieInfoElement = document.getElementById("movieInfo");
+                                movieInfoElement.textContent = movieTitle + " (" + movieYear + ")";
+                              }
+                            });
+                          
+                            xhr.open("GET", "https://api.collectapi.com/imdb/imdbSearchByName?query=The Fault in Our Stars");
+                            xhr.setRequestHeader("content-type", "application/json");
+                            xhr.setRequestHeader("authorization", "apikey 2IuYoOhbiDPVlMLMx9iobh:6ZHoVxymSiUkKoqv0kttJ5");
+                          
+                            xhr.send();
+                          </script>
                         </div>
-                        <div class="col-3 card-container">
-                            <div class="card ">
-                                <img class="card-image img-fluid" src="img/poster-2.jpeg" alt="">
-                                <div class="card-body">
-                                    <h2>Star Wars</h2>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum porro dolore expedita distinctio quas in.</p>
-                                    <p>
-                                        <button class="btn btn-primary">Details</button>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-3 card-container">
+                    <div class="card">
+                      <div class="card-body">
+                        <h2>Kitaplar</h2>
+                        <div id="bookList"></div>
+                        <p> <strong>Kürk Mantolu Madonna: </strong>Kürk Mantolu Madonna, 
+                        Sabahattin Ali'nin 1943 yılında yayımladığı bir romanıdır.
+                         Kitapta dokunaklı bir aşk hikâyesi anlatılmaktadır. 
+                         İlk olarak Hakikat gazetesinde 18 Aralık 1940 - 8 Şubat 1941 
+                         (çıkmadığı günler: 8-10, 14-15 Ocak 1941) arasında Büyük Hikâye başlığı altında 
+                         48 bölüm olarak yayımlanmıştır.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+              <script>
+                var xhr = new XMLHttpRequest();
+                xhr.withCredentials = true;
+            
+                xhr.addEventListener("readystatechange", function () {
+                  if (this.readyState === this.DONE) {
+                    var response = JSON.parse(this.responseText);
+                    var books = response.result;
+            
+                    var listElement = document.createElement("ul");
+            
+                    for (var i = 0; i < books.length; i++) {
+                      var book = books[i];
+            
+                      var listItem = document.createElement("li");
+            
+                      var bookTitle = document.createElement("h3");
+                      bookTitle.textContent = book.title;
+            
+                      var bookAuthor = document.createElement("p");
+                      bookAuthor.textContent = "Yazar: " + book.yazar;
+            
+                      var bookPrice = document.createElement("p");
+                      bookPrice.textContent = "Fiyat: " + book.fiyat;
+            
+                      var bookImage = document.createElement("img");
+                      bookImage.src = book.image;
+            
+                      listItem.appendChild(bookTitle);
+                      listItem.appendChild(bookAuthor);
+                      listItem.appendChild(bookPrice);
+                      listItem.appendChild(bookImage);
+            
+                      listElement.appendChild(listItem);
+                    }
+            
+                    var bookListElement = document.getElementById("bookList");
+                    bookListElement.appendChild(listElement);
+                  }
+                });
+            
+                xhr.open("GET", "https://api.collectapi.com/book/newBook");
+                xhr.setRequestHeader("content-type", "application/json");
+                xhr.setRequestHeader("authorization", "apikey 2IuYoOhbiDPVlMLMx9iobh:6ZHoVxymSiUkKoqv0kttJ5");
+            
+                xhr.send();
+              </script>
                         <div class="col-3 card-container">
                             <div class="card ">
                                 <img class="card-image img-fluid" src="img/poster-3.jpeg" alt="">
                                 <div class="card-body">
-                                    <h2>Star Wars</h2>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum porro dolore expedita distinctio quas in.</p>
-                                    <p>
-                                        <button class="btn btn-primary">Details</button>
+                                    <h2>Müzikler</h2>
+                                    <p>Hymn For The Missing</p>
                                     </p>
                                 </div>
                             </div>

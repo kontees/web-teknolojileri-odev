@@ -110,7 +110,6 @@
             <div class="col-3 plan plan--featured">
               <div class="inner-plan recommended_plan">
                 <h2 class="plan__badge">Mirasımız</h2>
-                <h2>Hitit uygarlığının incisi </h2>
                 <h3>Geçmişten bugüne gelen hikaye</h3>
                 <ul class="plan__features">
                   <li>Futbol Takımı</li>
@@ -122,29 +121,34 @@
                 <div>
                   <button class="btn btn-primary" onclick="goToTeamPage()">Takımımız</button>
                 </div>
-                
+            
                 <script>
                   function goToTeamPage() {
                     window.location.href = "mirasımız.html";
                   }
                 </script>
-                </div>
               </div>
-
+            </div>
         <div class="col-3 plan">
             <div class="inner-plan">
               <h2>İlgi Alanlarım</h2>
               <h3> film,spor,kitap ve dahası...</h3>
               <ul class="plan__features">
                 <li>dram filmleri</li>
-                <li>uzakdoğu dizileri</li>
+                <li>kitaplar</li>
                 <li>farklı tarzda şarkılar </li>
                 <li>ve dahasını öğrenmek için</li>
                 <li>aşağıdaki butona basınız</li>
               </ul>
               <div>
-                <button class="btn btn-primary">İlgi Alanlarım</button>
+                <button class="btn btn-primary" onclick="goToInterestsPage()">İlgi Alanlarım</button>
               </div>
+              <script>
+                function goToInterestsPage() {
+                  window.location.href = "ilgialanlarım.html";
+                }
+              </script>
+
             </div>
           </div>
         </div>

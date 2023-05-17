@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>❃-Eğitim Bilgileri</title>
+    <title>❃-Form Verileri Goruntule</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
@@ -57,46 +57,52 @@
     <section id="how-it-works">
       <h2>...............................</h2>
     </section>
-
     <section id="how-it-works">
       <div class="col-3 card-container">
         <div class="card">
           <div class="card-body">
             <h2>Gönderilen Form Verileri</h2>
 
-            <script>
-              // localStorage'dan form verilerini al
-              const formData = JSON.parse(localStorage.getItem("formData"));
-
-              // Verileri kullanarak formu görüntüle
-              document.getElementById("firstname").textContent =
-                formData.firstname;
-              document.getElementById("lastname").textContent =
-                formData.lastname;
-              document.getElementById("email").textContent = formData.email;
-              document.getElementById("password").textContent =
-                formData.password;
-              document.getElementById("gender").textContent = formData.gender;
-            </script>
-
-            <strong>Adınız:</strong> <span id="firstname"></span> <br />
-            <br />
-            <strong>Soyadınız:</strong> <span id="lastname"></span> <br />
-            <br />
-            <strong>Emailiniz:</strong> <span id="email"></span> <br />
-            <br />
-            <strong>Şifreniz:</strong> <span id="password"></span> <br />
-            <br />
-            <strong>Cinsiyetiniz:</strong> <span id="gender"></span> <br />
-            <br />
-
-            <strong>mail ile bilgilendirilme:</strong>
+            <p><strong> Ad:</strong> <span id="firstname"></span></p>
             <br />
             <br />
-            <span id="agreeTerms"></span>
+            <p><strong> Soyad:</strong> <span id="lastname"></span></p>
+            <br />
+            <br />
+            <p><strong> Eposta:</strong> <span id="email"></span></p>
+            <br />
+            <br />
+            <p><strong> Doğum Tarihi:</strong> <span id="birthdate"></span></p>
+            <br />
+            <br />
+            <p><strong> Şifre:</strong><span id="password"></span></p>
+            <br />
+            <br />
+            <p><strong> Cinsiyet:</strong> <span id="gender"></span></p>
+            <br />
+            <br />
+            <p>
+              <strong> Şartları Kabul Et:</strong> <span id="agreeTerms"></span>
+            </p>
           </div>
         </div>
       </div>
     </section>
+
+    <script>
+      // localStorage'dan form verilerini al
+      var formData = JSON.parse(localStorage.getItem("formData"));
+
+      // Form verilerini ekrana yazdır
+      document.getElementById("firstname").textContent = formData.firstname;
+      document.getElementById("lastname").textContent = formData.lastname;
+      document.getElementById("email").textContent = formData.email;
+      document.getElementById("birthdate").textContent = formData.birthdate;
+      document.getElementById("password").textContent = formData.password;
+      document.getElementById("gender").textContent = formData.gender;
+      document.getElementById("agreeTerms").textContent = formData.agreeTerms
+        ? "Kabul Edildi"
+        : "Kabul Edilmedi";
+    </script>
   </body>
 </html>
