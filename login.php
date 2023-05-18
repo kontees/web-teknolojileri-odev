@@ -13,17 +13,19 @@ $email = $_POST['email'];
 $password = $_POST['password'];
 
 // Kullanıcı adı ve şifreyi kontrol et
-if ($email === 'g221210082' && $password === 'g221210082') {
+if ($email === 'g221210082@sakarya.edu.tr' && $password === 'g221210082') {
   // Doğru ise kullanıcı bilgilerini sakla
   session_start();
   $_SESSION['email'] = $email;
 
-  // Yönlendirme yapmadan önce birkaç saniye bekleyebilirsiniz
-   echo "Hoşgeldin, " . $email . "! Yönlendiriliyorsunuz...";
-   header("refresh:3;url=duygu.html");
+  // JavaScript kodunu yazdır
+  echo '<script>
+    alert("Hoşgeldin, ' . $email . '!");
+    setTimeout(function() {
+      window.location.href = "index.html";
+    }, 3000); // 3 saniye bekleyip yönlendirme yap
+  </script>';
 
-  // Yönlendirme yap
-  header("Location: duygu.html");
   exit();
 } else {
   echo "Kullanıcı adı veya şifre hatalı.";
