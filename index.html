@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>❃-𝓭𝓾𝔂𝓰𝓾'𝓼 𝓭𝓲𝓪𝓻𝔂</title>   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/buttons.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body id="body"> 
+
+    <header class="ana-başlık">
+        <a href="#" class="main-header__logo">𝓭𝓾𝔂𝓰𝓾'𝓼 𝓭𝓲𝓪𝓻𝔂</a>
+        <nav class="main-nav">
+            <ul class="main-nav__items">
+                <li class="main-nav__item">
+                    <a href="egitimbilgileri.html">Eğitim Bilgileri</a>
+                </li>
+                <li class="main-nav__item">
+                    <a href="form.html">iletişim Sayfası </a>
+                   
+                </li>
+                <li class="main-nav__item">
+                  <a href="#">Kayıt Ol</a>
+              </li>
+                <li class="main-nav__item main-nav__item--login">
+                    <a class="btn btn-secondary" href="logın.html">Login</a>
+                </li>
+            </ul>
+        </nav>
+    </header>    
+
+    <main>
+        <section id="ana-kısım">
+            <div class="content">
+                <h2>Merhaba ! <h2>
+                <h3>Beni daha yakından tanımaya ne dersiniz ?
+                </h3>
+            </div>
+        </section>
+        <section id="how-it-works">
+            <div class="row">
+                <h2 class="section-title">Bu yolculuğa hazır mısın ?
+                     </h2>
+            </div>
+
+            <div class="row">
+                <div class="icon-box col-3">
+                    <i class="fas fa-sign-in-alt fa-3x"></i>
+                    <h3>Kayıt ol</h3>
+                    <p>Beni daha yakından tanımak için öncellikle siteme kayıt ol kısmından kayıt olmayı unutmayınız.</p>
+                </div>
+                <div class="icon-box col-3">
+                    <i class="fab fa-buffer fa-3x"></i>
+                    <h3>Keşife başla </h3>
+                    <p>Benim ve yaşadığım şehir hakkında birçok bilgiye anında ulaşabilmen için seni sayfamda minik bir keşfe davet ediyorum</p>
+                </div>
+                <div class="icon-box col-3">
+                    <i class="far fa-smile fa-3x"></i>
+                    <h3>Bilginin Tadını Çıkar</h3>
+                    <p>Binlerce öğreneceğin yeni bilgilerin tadını çıkarmaya ve keyif alacağın bu ziyarete şimdiden hazır ol </p>
+                </div>
+            </div>
+
+        </section>
+        <section id="features">
+            <div class="row">
+                <div class="col-2 features__left"></div><div class="col-2 features__right">
+                    <h3>Merhaba işte kendimi tanıttığım minik bir yazı sizlerle</h3>
+                    <p>Merhaba adım Şevval Duygu Örklemez. 7 Aralık 2002 yılında doğdum. Şu an üniversitede
+                    Bilgisayar Mühendisliği 1. sınıf öğrencisi olarak öğrenim görmekteyim. Hobilerim arasında
+                    genellikle evde kendi halimde takılmak vardır. Çok fazla arkadaş canlısı biri olmadığım için
+                  kendi halimde evde takılmayı daha çok seviyorum. Birçok dizi ve filmi izlemeyi tercih ederim. En sevdiğim
+                spor voleyboldur fakat oynamayı değil izlemeyi seviyorum. Hakkımda daha çok bilgi için lütfen içerikler kısmına göz atmayı unutmayınız </p>
+                  
+                </div>
+            </div>
+        </section>
+
+        <h2 class="section-title">İçerikler </h2>
+        <div class="container">
+          <div class="row">
+            <div class="col-3 plan">
+              <div class="inner-plan">
+                <h2>ŞEHRİM</h2>
+                <h3>Çorum</h3>
+                <ul class="plan__features">
+                  <li>Hitit uygarlığının merkezi</li>
+                  <li>her biri sanat şaheseri olan Selçuklu mimarisi ile süslü</li>
+                  <li>>Meşhur leblebisi ile dünyaca tanınan Çorum için</li>
+                  <li> aşağıdaki butona tıklayınız</li>
+                </ul>
+
+                <div>
+                  <button class="btn btn-primary" onclick="goToCityPage()">Şehrim</button>
+                </div>
+                
+                <script>
+                  function goToCityPage() {
+                    window.location.href = "sehrim.html";
+                  }
+                </script>
+              </div>
+            </div>
+            <div class="col-3 plan plan--featured">
+              <div class="inner-plan recommended_plan">
+                <h2 class="plan__badge">Mirasımız</h2>
+                <h3>Geçmişten bugüne gelen hikaye</h3>
+                <ul class="plan__features">
+                  <li>Futbol Takımı</li>
+                  <li>Bulunduğum şehrimin futbol takımı hakkında 
+                    daha fazla bilgiye ulaşmak için lütfen butona tıklayınız
+                  </li>
+                </ul>
+                
+                <div>
+                  <button class="btn btn-primary" onclick="goToTeamPage()">Takımımız</button>
+                </div>
+            
+                <script>
+                  function goToTeamPage() {
+                    window.location.href = "mirasımız.html";
+                  }
+                </script>
+              </div>
+            </div>
+        <div class="col-3 plan">
+            <div class="inner-plan">
+              <h2>İlgi Alanlarım</h2>
+              <h3> film,spor,kitap ve dahası...</h3>
+              <ul class="plan__features">
+                <li>dram filmleri</li>
+                <li>kitaplar</li>
+                <li>farklı tarzda şarkılar </li>
+                <li>ve dahasını öğrenmek için</li>
+                <li>aşağıdaki butona basınız</li>
+              </ul>
+              <div>
+                <button class="btn btn-primary" onclick="goToInterestsPage()">İlgi Alanlarım</button>
+              </div>
+              <script>
+                function goToInterestsPage() {
+                  window.location.href = "ilgialanlarım.html";
+                }
+              </script>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="panel">
+      <div class="row panel">
+        <div class="col-3">
+          <span class="panel__item">108</span>
+          <h4>Ziyaretçi</h4>
+        </div>
+        <div class="col-3">
+          <span class="panel__item">72</span>
+          <h4>Yeni Kayıt</h4>
+        </div>
+        <div class="col-3">
+          <span class="panel__item">152</span>
+          <h4>Görüntülenme</h4>
+        </div>
+      </div>
+    </section>
+       
+
+
+
+</body>
+</html>
